@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>Bundle & Save</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">Bundle & Save</div>
+            <div class="option" data-price="175">
+                <div class="details">
+                    <input type="radio" name="bundle" id="bundle1">
+                    <div>
+                        <div class="font1">1 Pair</div>
+                        <div class="font2">DKK 195.00</div>
+                    </div>
+                    <div class="discount">50% OFF</div>
+                </div>
+                <div class="size-colour">
+
+                        <option>Size</option>
+                       
+                   
+                        <option>Colour</option>
+
+
+                </div>
+                <div class="size-colour">
+                  
+                    
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+
+                </div>
+                <div class="size-colour">
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="option" data-price="188">
+                <div class="details">
+                    <input type="radio" name="bundle" id="bundle1">
+                    <div>
+                        <div class="font1">2 Pair</div>
+                        <div class="font2">DKK 195.00</div>
+                    </div>
+                    <div class="discount">55% OFF</div>
+                </div>
+                <div class="size-colour">
+
+                    <option>Size</option>
+                   
+               
+                    <option>Colour</option>
+
+
+            </div>
+                <div class="size-colour">
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+
+                </div>
+                <div class="size-colour">
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="option" data-price="190">
+                <div class="details">
+                    <input type="radio" name="bundle" id="bundle1">
+                    <div>
+                        <div class="font1">3 Pair</div>
+                        <div class="font2">DKK 195.00</div>
+                    </div>
+                    <div class="discount">40% OFF</div>
+                </div>
+                <div class="size-colour">
+
+                    <option>Size</option>
+                   
+               
+                    <option>Colour</option>
+
+
+            </div>
+                <div class="size-colour">
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+
+                </div>
+                <div class="size-colour">
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="shipping">Free 2 Day Shipping</div>
+            <div class="total">Total : DKK 360.00</div>
+            <a href="#" class="add-to-cart">+ Add to Cart</a>
+        </div>
+
+        <script>
+        document.querySelectorAll('.option input').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+                this.closest('.option').classList.add('selected');
+                updateTotal();
+            });
+        });
+
+        function updateTotal() {
+            const selectedOption = document.querySelector('.option.selected');
+            const price = selectedOption.getAttribute('data-price');
+            document.querySelector('.total').textContent = 'Total : DKK ' + price + '.00';
+        }
+
+        updateTotal();
+    </script>
+    </body>
+</html>
